@@ -1,0 +1,136 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue Mar 21 10:51:55 2023
+| Host         : LAPTOP-RT1BMTBG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file fpga_top_control_sets_placed.rpt
+| Design       : fpga_top
+| Device       : xc7z020
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    60 |
+| Unused register locations in slices containing registers |   219 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            3 |
+|      2 |            2 |
+|      3 |            2 |
+|      4 |            2 |
+|      5 |            1 |
+|      6 |            1 |
+|      8 |            2 |
+|      9 |            5 |
+|     10 |            3 |
+|     11 |            5 |
+|     12 |            8 |
+|     13 |            2 |
+|    16+ |           24 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              15 |            5 |
+| No           | No                    | Yes                    |             389 |          123 |
+| No           | Yes                   | No                     |               9 |            4 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             744 |          222 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------+--------------------------------------------------+-----------------------------------------------+------------------+----------------+
+|     Clock Signal    |                   Enable Signal                  |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++---------------------+--------------------------------------------------+-----------------------------------------------+------------------+----------------+
+|  clk_BUFG           | as5600_read_i/scl_i_1_n_0                        | adc_ad7928_i/rstn                             |                1 |              1 |
+|  clk_120m_IBUF_BUFG | clk_BUFG                                         | foc_top_i/svpwm_i/rstn_0                      |                1 |              1 |
+|  clk_BUFG           | adc_ad7928_i/spi_mosi_i_1_n_0                    | adc_ad7928_i/rstn                             |                1 |              1 |
+|  clk_BUFG           | foc_top_i/cartesian2polar_i/signx                | foc_top_i/cartesian2polar_i/init_done_reg_0   |                2 |              2 |
+|  clk_120m_IBUF_BUFG |                                                  | foc_top_i/svpwm_i/rstn_0                      |                1 |              2 |
+|  clk_BUFG           |                                                  | foc_top_i/park_tr_i/init_done_reg             |                1 |              3 |
+|  clk_BUFG           |                                                  | foc_top_i/cartesian2polar_i/init_done_reg_1   |                2 |              3 |
+|  clk_BUFG           | uart_monitor_i/tx_cnt[3]_i_1_n_0                 | uart_monitor_i/FSM_sequential_vcnt[1]_i_3_n_0 |                2 |              4 |
+|  clk_BUFG           | uart_monitor_i/FSM_sequential_vcnt[1]_i_1_n_0    | uart_monitor_i/FSM_sequential_vcnt[1]_i_3_n_0 |                1 |              4 |
+|  clk_BUFG           | uart_monitor_i/itoa_zero                         | uart_monitor_i/FSM_sequential_vcnt[1]_i_3_n_0 |                2 |              5 |
+|  clk_BUFG           | adc_ad7928_i/cnt                                 | adc_ad7928_i/rstn                             |                2 |              6 |
+|  clk_BUFG           | as5600_read_i/send_shift[7]_i_1_n_0              | adc_ad7928_i/rstn                             |                2 |              8 |
+|  clk_BUFG           | as5600_read_i/cnt[7]_i_1_n_0                     | adc_ad7928_i/rstn                             |                3 |              8 |
+|  clk_BUFG           |                                                  | foc_top_i/svpwm_i/z3                          |                4 |              9 |
+|  clk_BUFG           | foc_top_i/svpwm_i/yb[8]_i_1_n_0                  | foc_top_i/svpwm_i/rstn                        |                2 |              9 |
+|  clk_BUFG           | foc_top_i/svpwm_i/mul_i1[8]_i_1_n_0              | foc_top_i/svpwm_i/rstn                        |                2 |              9 |
+|  clk_BUFG           | foc_top_i/park_tr_i/sincos_i/rom_x[9]_i_1__0_n_0 | foc_top_i/park_tr_i/sincos_i/init_done_reg    |                2 |              9 |
+|  clk_BUFG           | foc_top_i/cartesian2polar_i/a[8]_i_1_n_0         | foc_top_i/cartesian2polar_i/init_done_reg_0   |                2 |              9 |
+|  clk_BUFG           | adc_ad7928_i/wshift[11]_i_1_n_0                  | adc_ad7928_i/rstn                             |                3 |             10 |
+|  clk_BUFG           | foc_top_i/svpwm_i/ya[8]_i_1_n_0                  | foc_top_i/svpwm_i/rstn                        |                2 |             10 |
+|  clk_BUFG           | uart_monitor_i/cnt                               | uart_monitor_i/FSM_sequential_vcnt[1]_i_3_n_0 |                3 |             10 |
+|  clk_BUFG           | foc_top_i/park_tr_i/sincos_i/theta_b[11]_i_1_n_0 | foc_top_i/park_tr_i/sincos_i/init_done_reg    |                5 |             11 |
+|  clk_BUFG           | as5600_read_i/regout[10]_i_1_n_0                 | adc_ad7928_i/rstn                             |                3 |             11 |
+|  clk_BUFG           | foc_top_i/cartesian2polar_i/o_rho[11]_i_1_n_0    | foc_top_i/park_tr_i/sincos_i/init_done_reg    |                3 |             11 |
+|  clk_BUFG           | as5600_read_i/recv_shift[10]_i_1_n_0             | adc_ad7928_i/rstn                             |                3 |             11 |
+|  clk_BUFG           | foc_top_i/park_tr_i/sincos_i/theta_a[11]_i_1_n_0 | foc_top_i/park_tr_i/sincos_i/init_done_reg    |                4 |             11 |
+|  clk_BUFG           | foc_top_i/init_done0_out                         | adc_ad7928_i/rstn                             |                4 |             12 |
+|  clk_BUFG           | adc_ad7928_i/data_in_latch                       | adc_ad7928_i/rstn                             |                3 |             12 |
+|  clk_BUFG           | adc_ad7928_i/ch_value[2][11]_i_1_n_0             | adc_ad7928_i/rstn                             |                3 |             12 |
+|  clk_BUFG           | foc_top_i/cartesian2polar_i/theta[11]_i_1_n_0    | foc_top_i/cartesian2polar_i/init_done_reg_0   |                5 |             12 |
+|  clk_BUFG           | adc_ad7928_i/nfirst2_out                         | adc_ad7928_i/rstn                             |                3 |             12 |
+|  clk_BUFG           | foc_top_i/svpwm_i/rom_x[11]_i_1_n_0              | foc_top_i/svpwm_i/rstn_0                      |                2 |             12 |
+|  clk_BUFG           | foc_top_i/svpwm_i/mul_i2[11]_i_1_n_0             | foc_top_i/svpwm_i/rstn                        |                3 |             12 |
+|  clk_BUFG           | adc_ad7928_i/ch_value[1][11]_i_1_n_0             | adc_ad7928_i/rstn                             |                5 |             12 |
+|  clk_BUFG           |                                                  | foc_top_i/svpwm_i/rstn_0                      |                5 |             13 |
+|  clk_BUFG           | foc_top_i/cartesian2polar_i/o_rho[11]_i_1_n_0    | foc_top_i/cartesian2polar_i/init_done_reg_1   |                4 |             13 |
+|  clk_BUFG           |                                                  |                                               |                5 |             16 |
+|  clk_BUFG           | foc_top_i/cartesian2polar_i/signx                | foc_top_i/cartesian2polar_i/init_done_reg     |                4 |             16 |
+|  clk_BUFG           | foc_top_i/adc_sn_ctrl_i/cnt[15]_i_1_n_0          | foc_top_i/cartesian2polar_i/init_done_reg_1   |                3 |             16 |
+|  clk_BUFG           | foc_top_i/park_tr_i/sincos_i/cos_tmp_0           | foc_top_i/park_tr_i/sincos_i/init_done_reg    |                4 |             16 |
+|  clk_BUFG           | uart_monitor_i/itoa_en                           | uart_monitor_i/FSM_sequential_vcnt[1]_i_3_n_0 |                6 |             16 |
+|  clk_BUFG           | foc_top_i/cartesian2polar_i/amp[15]_i_1_n_0      | foc_top_i/cartesian2polar_i/init_done_reg_1   |                4 |             16 |
+|  clk_BUFG           | foc_top_i/cartesian2polar_i/absx[15]_i_1_n_0     | foc_top_i/cartesian2polar_i/init_done_reg     |                6 |             16 |
+|  clk_BUFG           |                                                  | foc_top_i/cartesian2polar_i/init_done_reg_0   |                6 |             18 |
+|  clk_BUFG           |                                                  | foc_top_i/cartesian2polar_i/init_done_reg     |                9 |             21 |
+|  clk_BUFG           | foc_top_i/vs_theta1                              | adc_ad7928_i/rstn                             |                7 |             24 |
+|  clk_BUFG           |                                                  | foc_top_i/svpwm_i/rstn                        |               10 |             28 |
+|  clk_BUFG           | foc_top_i/svpwm_i/pwma_duty[9]_i_1_n_0           | foc_top_i/svpwm_i/rstn                        |                9 |             30 |
+|  clk_BUFG           | foc_top_i/park_tr_i/sincos_i/o_sin[15]_i_1_n_0   | foc_top_i/park_tr_i/sincos_i/init_done_reg    |                9 |             32 |
+|  clk_BUFG           | foc_top_i/clark_tr_i/en_s2                       | foc_top_i/park_tr_i/sincos_i/init_done_reg    |                9 |             32 |
+|  clk_BUFG           | uart_monitor_i/itoa_str[0][5]_i_1_n_0            | uart_monitor_i/FSM_sequential_vcnt[1]_i_3_n_0 |                9 |             36 |
+|  clk_BUFG           |                                                  | adc_ad7928_i/rstn                             |               17 |             38 |
+|  clk_BUFG           |                                                  | foc_top_i/park_tr_i/sincos_i/init_done_reg    |               11 |             38 |
+|  clk_BUFG           |                                                  | uart_monitor_i/FSM_sequential_vcnt[1]_i_3_n_0 |               12 |             38 |
+|  clk_BUFG           | foc_top_i/cartesian2polar_i/accb                 | foc_top_i/cartesian2polar_i/init_done_reg     |               15 |             44 |
+|  clk_BUFG           | foc_top_i/cartesian2polar_i/smtb                 | foc_top_i/cartesian2polar_i/init_done_reg_0   |               19 |             56 |
+|  clk_BUFG           | foc_top_i/svpwm_i/pwma_lb[9]_i_1_n_0             | foc_top_i/svpwm_i/rstn                        |               15 |             60 |
+|  clk_BUFG           | foc_top_i/park_tr_i/en_s1                        | foc_top_i/park_tr_i/init_done_reg             |               20 |             64 |
+|  clk_BUFG           |                                                  | foc_top_i/clark_tr_i/init_done_reg            |               23 |             90 |
+|  clk_BUFG           |                                                  | foc_top_i/pi_iq_i/init_done_reg               |               26 |             97 |
++---------------------+--------------------------------------------------+-----------------------------------------------+------------------+----------------+
+
+

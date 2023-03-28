@@ -1,0 +1,939 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Mar 21 10:50:25 2023
+# Process ID: 18168
+# Current directory: C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.runs/synth_1
+# Command line: vivado.exe -log fpga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_top.tcl
+# Log file: C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.runs/synth_1/fpga_top.vds
+# Journal file: C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source fpga_top.tcl -notrace
+Command: synth_design -top fpga_top -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7384 
+WARNING: [Synth 8-2507] parameter declaration becomes local in pi_controller with formal parameter declaration list [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:20]
+WARNING: [Synth 8-2507] parameter declaration becomes local in pi_controller with formal parameter declaration list [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:21]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 378.777 ; gain = 117.785
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fpga_top' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/fpga_top.sv:14]
+	Parameter n bound to: 16'b0000000001100100 
+INFO: [Synth 8-6157] synthesizing module 'f_30M' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/f_30M.v:1]
+	Parameter DIVCNT_MAX bound to: 4'b0001 
+INFO: [Synth 8-6155] done synthesizing module 'f_30M' (1#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/f_30M.v:1]
+INFO: [Synth 8-6157] synthesizing module 'i2c_register_read' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/i2c_register_read.sv:7]
+	Parameter CLK_DIV bound to: 16'b0000000000001010 
+	Parameter SLAVE_ADDR bound to: 7'b0110110 
+	Parameter REGISTER_ADDR bound to: 8'b00001110 
+	Parameter CLK_DIV_PARSED bound to: 16'b0000000000001001 
+INFO: [Synth 8-6155] done synthesizing module 'i2c_register_read' (2#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/i2c_register_read.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'adc_ad7928' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/adc_ad7928.sv:9]
+	Parameter CH_CNT bound to: 3'b010 
+	Parameter CH0 bound to: 3'b001 
+	Parameter CH1 bound to: 3'b010 
+	Parameter CH2 bound to: 3'b011 
+	Parameter CH3 bound to: 3'b011 
+	Parameter CH4 bound to: 3'b100 
+	Parameter CH5 bound to: 3'b101 
+	Parameter CH6 bound to: 3'b110 
+	Parameter CH7 bound to: 3'b111 
+	Parameter WAIT_CNT bound to: 8'b00000110 
+INFO: [Synth 8-6155] done synthesizing module 'adc_ad7928' (3#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/adc_ad7928.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'foc_top' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/foc_top.sv:9]
+	Parameter INIT_CYCLES bound to: 15000000 - type: integer 
+	Parameter ANGLE_INV bound to: 1'b0 
+	Parameter POLE_PAIR bound to: 8'b00001110 
+	Parameter MAX_AMP bound to: 9'b110000000 
+	Parameter SAMPLE_DELAY bound to: 9'b001111000 
+	Parameter Kp bound to: 24'b000000000001010000110001 
+	Parameter Ki bound to: 24'b000000000000000000000011 
+INFO: [Synth 8-6157] synthesizing module 'clark_tr' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/clark_tr.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'clark_tr' (4#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/clark_tr.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'park_tr' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/park_tr.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'sincos' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:9]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:36]
+INFO: [Synth 8-6155] done synthesizing module 'sincos' (5#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'park_tr' (6#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/park_tr.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'pi_controller' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:7]
+	Parameter Kp bound to: 24'b000000000001010000110001 
+	Parameter Ki bound to: 24'b000000000000000000000011 
+	Parameter Kp1 bound to: 24'b000000111011011000110010 
+	Parameter Ki1 bound to: 24'b000000000000000000000001 
+WARNING: [Synth 8-6090] variable 'idelta' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:45]
+WARNING: [Synth 8-3848] Net o_en in module/entity pi_controller does not have driver. [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:16]
+INFO: [Synth 8-6155] done synthesizing module 'pi_controller' (7#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'cartesian2polar' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/cartesian2polar.sv:7]
+	Parameter ATTENUAION bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cartesian2polar' (8#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/cartesian2polar.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'svpwm' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/svpwm.sv:11]
+	Parameter ROM_LATENCY bound to: 11'b00000000100 
+INFO: [Synth 8-6155] done synthesizing module 'svpwm' (9#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/svpwm.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'hold_detect' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/hold_detect.sv:7]
+	Parameter SAMPLE_DELAY bound to: 16'b0000000001111000 
+INFO: [Synth 8-6155] done synthesizing module 'hold_detect' (10#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/hold_detect.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'foc_top' (11#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/foc_top.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'uart_monitor' [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/uart_monitor.sv:7]
+	Parameter CLK_DIV bound to: 16'b0001100001101010 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/uart_monitor.sv:67]
+INFO: [Synth 8-6155] done synthesizing module 'uart_monitor' (12#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/uart_monitor.sv:7]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/fpga_top.sv:171]
+INFO: [Synth 8-6155] done synthesizing module 'fpga_top' (13#1) [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/fpga_top.sv:14]
+WARNING: [Synth 8-3331] design pi_controller has unconnected port o_en
+WARNING: [Synth 8-3331] design pi_controller has unconnected port i_en
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 449.164 ; gain = 188.172
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 449.164 ; gain = 188.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 449.164 ; gain = 188.172
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/constrs_1/new/fpga_top.xdc]
+Finished Parsing XDC File [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/constrs_1/new/fpga_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/constrs_1/new/fpga_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fpga_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fpga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 809.648 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 809.648 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 809.648 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 809.648 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 809.648 ; gain = 548.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 809.648 ; gain = 548.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 809.648 ; gain = 548.656
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "epoch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "sda_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "recv_shift" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "epoch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "sda_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "recv_shift" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'stat_reg' in module 'sincos'
+INFO: [Synth 8-5544] ROM "sin_s" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cos_s" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rom_x" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cos_tmp" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_cos" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "o_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "absy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "o_theta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mul_i1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pwmc_ub" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "init_phi" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'stat_reg' in module 'uart_monitor'
+INFO: [Synth 8-802] inferred FSM for state register 'vcnt_reg' in module 'uart_monitor'
+INFO: [Synth 8-5544] ROM "stat" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "itoa_rem" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "vcnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tx_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                      S1 |                              001 |                              001
+                      S2 |                              010 |                              010
+                      S3 |                              011 |                              011
+                      S4 |                              100 |                              100
+                      S5 |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'stat_reg' using encoding 'sequential' in module 'sincos'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                              000 |                              000
+                 iSTATE1 |                              001 |                              001
+                 iSTATE2 |                              010 |                              010
+                 iSTATE3 |                              011 |                              011
+                  iSTATE |                              100 |                              100
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'vcnt_reg' using encoding 'sequential' in module 'uart_monitor'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                  SELECT |                              001 |                              001
+                    WAIT |                              010 |                              010
+                 PARSING |                              011 |                              011
+                 SENDING |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'stat_reg' using encoding 'sequential' in module 'uart_monitor'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 809.648 ; gain = 548.656
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 3     
+	   2 Input     28 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 10    
+	   3 Input     16 Bit       Adders := 6     
+	   4 Input     16 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 9     
+	   3 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 5     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 3     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	               28 Bit    Registers := 3     
+	               16 Bit    Registers := 31    
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 24    
+	               11 Bit    Registers := 7     
+	               10 Bit    Registers := 5     
+	                9 Bit    Registers := 8     
+	                8 Bit    Registers := 10    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 50    
++---Multipliers : 
+	                18x32  Multipliers := 2     
++---ROMs : 
+	                              ROMs := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     28 Bit        Muxes := 5     
+	   2 Input     16 Bit        Muxes := 14    
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 10    
+	   6 Input     12 Bit        Muxes := 1     
+	   3 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 6     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 4     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   4 Input      6 Bit        Muxes := 1     
+	   5 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 140   
+	   5 Input      1 Bit        Muxes := 10    
+	   4 Input      1 Bit        Muxes := 9     
+	   6 Input      1 Bit        Muxes := 13    
+	   9 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module f_30M 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module i2c_register_read 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 57    
+	   5 Input      1 Bit        Muxes := 2     
+Module adc_ad7928 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 10    
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 35    
+	   4 Input      1 Bit        Muxes := 5     
+Module clark_tr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 6     
++---Registers : 
+	               16 Bit    Registers := 9     
+	                1 Bit    Registers := 3     
+Module sincos 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 3     
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     12 Bit        Muxes := 2     
+	   6 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 9     
+Module park_tr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               16 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
+Module pi_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
++---Multipliers : 
+	                18x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module cartesian2polar 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 4     
+	   2 Input     12 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               28 Bit    Registers := 3     
+	               16 Bit    Registers := 4     
+	               12 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---ROMs : 
+	                              ROMs := 2     
++---Muxes : 
+	   2 Input     28 Bit        Muxes := 5     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 3     
+	   3 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 19    
+	   4 Input      1 Bit        Muxes := 4     
+Module svpwm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 3     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               12 Bit    Registers := 4     
+	               11 Bit    Registers := 7     
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 5     
+	                1 Bit    Registers := 13    
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 14    
+	   9 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 4     
+	   8 Input      1 Bit        Muxes := 1     
+Module hold_detect 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module foc_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 3     
+	   3 Input     12 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               12 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module uart_monitor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 3     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 7     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   5 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "clk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "recv_shift" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sda_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "epoch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ch_value_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ch_value_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+DSP Report: Generating DSP beta_sin0, operation Mode is: A*B.
+DSP Report: operator beta_sin0 is absorbed into DSP beta_sin0.
+DSP Report: Generating DSP alpha_cos0, operation Mode is: A*B.
+DSP Report: operator alpha_cos0 is absorbed into DSP alpha_cos0.
+DSP Report: Generating DSP alpha_sin0, operation Mode is: A*B.
+DSP Report: operator alpha_sin0 is absorbed into DSP alpha_sin0.
+DSP Report: Generating DSP beta_cos0, operation Mode is: A*B.
+DSP Report: operator beta_cos0 is absorbed into DSP beta_cos0.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:46]
+DSP Report: Generating DSP value1, operation Mode is: (A:0x3b632)*B.
+DSP Report: operator value1 is absorbed into DSP value1.
+DSP Report: operator value1 is absorbed into DSP value1.
+DSP Report: Generating DSP value1, operation Mode is: (PCIN>>17)+(A:0x3b632)*B.
+DSP Report: operator value1 is absorbed into DSP value1.
+DSP Report: operator value1 is absorbed into DSP value1.
+DSP Report: Generating DSP value1, operation Mode is: (A:0x3b632)*B.
+DSP Report: operator value1 is absorbed into DSP value1.
+DSP Report: operator value1 is absorbed into DSP value1.
+DSP Report: Generating DSP value1, operation Mode is: (PCIN>>17)+(A:0x3632)*B.
+DSP Report: operator value1 is absorbed into DSP value1.
+DSP Report: operator value1 is absorbed into DSP value1.
+INFO: [Synth 8-5546] ROM "o_theta" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "p_1_out0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "absy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP mul, operation Mode is: A*B.
+DSP Report: operator mul is absorbed into DSP mul.
+INFO: [Synth 8-5544] ROM "p_1_out0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_1_out0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pwmc_ub" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mul_i1" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP mul_y, operation Mode is: A*B.
+DSP Report: operator mul_y is absorbed into DSP mul_y.
+INFO: [Synth 8-5545] ROM "init_phi" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP ia0, operation Mode is: A*(B:0x18).
+DSP Report: operator ia0 is absorbed into DSP ia0.
+DSP Report: Generating DSP ib0, operation Mode is: A*(B:0x18).
+DSP Report: operator ib0 is absorbed into DSP ib0.
+DSP Report: Generating DSP ic0, operation Mode is: A*(B:0x18).
+DSP Report: operator ic0 is absorbed into DSP ic0.
+INFO: [Synth 8-5544] ROM "stat" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "itoa_rem" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-3331] design pi_controller has unconnected port o_en
+WARNING: [Synth 8-3331] design pi_controller has unconnected port i_en
+WARNING: [Synth 8-3331] design clark_tr has unconnected port i_ia[15]
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[16]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[17]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[17]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[18]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[18]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[19]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[19]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[20]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[20]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[21]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[21]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[22]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[22]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[23]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[23]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[24]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[24]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[25]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[25]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[26]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[26]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[27]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[27]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[28]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[28]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[29]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[29]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[30]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_iq_i/pdelta_reg[30]' (FDC) to 'foc_top_i/pi_iq_i/pdelta_reg[31]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (adc_ad7928_i/\wshift_reg[0] )
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[16]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[17]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[17]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[18]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[18]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[19]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[19]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[20]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[20]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[21]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[21]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[22]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[22]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[23]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[23]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[24]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[24]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[25]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[25]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[26]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[26]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[27]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[27]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[28]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[28]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[29]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[29]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[30]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/pi_id_i/pdelta_reg[30]' (FDC) to 'foc_top_i/pi_id_i/pdelta_reg[31]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/clark_tr_i/ax2_s1_reg[0]' (FDC) to 'foc_top_i/psi_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (foc_top_i/\psi_reg[0] )
+INFO: [Synth 8-3886] merging instance 'foc_top_i/clark_tr_i/i_beta3_s2_reg[9]' (FDC) to 'foc_top_i/clark_tr_i/i_beta3_s2_reg[10]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/clark_tr_i/i_beta3_s2_reg[10]' (FDC) to 'foc_top_i/clark_tr_i/i_beta3_s2_reg[11]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/clark_tr_i/i_beta3_s2_reg[11]' (FDC) to 'foc_top_i/clark_tr_i/i_beta3_s2_reg[12]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/clark_tr_i/i_beta3_s2_reg[12]' (FDC) to 'foc_top_i/clark_tr_i/i_beta3_s2_reg[13]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/clark_tr_i/i_beta2_s2_reg[13]' (FDC) to 'foc_top_i/clark_tr_i/i_beta2_s2_reg[14]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/clark_tr_i/i_beta3_s2_reg[13]' (FDC) to 'foc_top_i/clark_tr_i/i_beta3_s2_reg[14]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/clark_tr_i/i_beta2_s2_reg[14]' (FDC) to 'foc_top_i/clark_tr_i/i_beta2_s2_reg[15]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/clark_tr_i/i_beta3_s2_reg[14]' (FDC) to 'foc_top_i/clark_tr_i/i_beta3_s2_reg[15]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/init_cnt_reg[30]' (FDCE) to 'foc_top_i/init_cnt_reg[24]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/init_cnt_reg[31]' (FDCE) to 'foc_top_i/init_cnt_reg[24]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/init_cnt_reg[29]' (FDCE) to 'foc_top_i/init_cnt_reg[24]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/init_cnt_reg[28]' (FDCE) to 'foc_top_i/init_cnt_reg[24]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/init_cnt_reg[27]' (FDCE) to 'foc_top_i/init_cnt_reg[24]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/init_cnt_reg[26]' (FDCE) to 'foc_top_i/init_cnt_reg[24]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/init_cnt_reg[25]' (FDCE) to 'foc_top_i/init_cnt_reg[24]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (foc_top_i/\init_cnt_reg[24] )
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/eov_reg[0]' (FDCE) to 'uart_monitor_i/eov_reg[2]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/eov_reg[1]' (FDCE) to 'uart_monitor_i/eov_reg[3]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/eov_reg[2]' (FDCE) to 'uart_monitor_i/eov_reg[4]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/eov_reg[4]' (FDCE) to 'uart_monitor_i/eov_reg[6]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/eov_reg[6]' (FDCE) to 'uart_monitor_i/eov_reg[7]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/itoa_str_reg[0][6]' (FDCE) to 'uart_monitor_i/itoa_str_reg[0][7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uart_monitor_i/\eov_reg[7] )
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/itoa_str_reg[1][7]' (FDCE) to 'uart_monitor_i/itoa_str_reg[1][6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uart_monitor_i/\itoa_str_reg[0][7] )
+INFO: [Synth 8-3886] merging instance 'foc_top_i/svpwm_i/pwmc_lb_reg[0]' (FDCE) to 'foc_top_i/svpwm_i/pwmc_ub_reg[0]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/svpwm_i/pwmb_lb_reg[0]' (FDCE) to 'foc_top_i/svpwm_i/pwmb_ub_reg[0]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/svpwm_i/pwma_lb_reg[0]' (FDCE) to 'foc_top_i/svpwm_i/pwma_ub_reg[0]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[14]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[15]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[13]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[12]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[11]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[10]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[9]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[8]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[7]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[6]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[5]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[4]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[3]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3886] merging instance 'f_clk_30M/divcnt_reg[2]' (FDC) to 'f_clk_30M/divcnt_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (f_clk_30M/\divcnt_reg[1] )
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/tx_shift_reg[12]' (FDPE) to 'uart_monitor_i/tx_shift_reg[2]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/tx_shift_reg[2]' (FDPE) to 'uart_monitor_i/tx_shift_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (uart_monitor_i/\tx_shift_reg[1] )
+INFO: [Synth 8-3886] merging instance 'adc_ad7928_i/cnt_reg[7]' (FDCE) to 'adc_ad7928_i/cnt_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (adc_ad7928_i/\cnt_reg[6] )
+INFO: [Synth 8-3886] merging instance 'foc_top_i/svpwm_i/pwmc_lb_reg[10]' (FDCE) to 'foc_top_i/svpwm_i/pwmb_lb_reg[10]'
+INFO: [Synth 8-3886] merging instance 'foc_top_i/svpwm_i/pwmb_lb_reg[10]' (FDCE) to 'foc_top_i/svpwm_i/pwma_lb_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (foc_top_i/\svpwm_i/pwma_lb_reg[10] )
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/itoa_str_reg[2][6]' (FDCE) to 'uart_monitor_i/itoa_str_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/itoa_str_reg[2][7]' (FDCE) to 'uart_monitor_i/itoa_str_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/itoa_str_reg[1][6]' (FDCE) to 'uart_monitor_i/itoa_str_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/itoa_str_reg[0][7]' (FDCE) to 'uart_monitor_i/itoa_str_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/itoa_str_reg[4][7]' (FDCE) to 'uart_monitor_i/itoa_str_reg[3][6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uart_monitor_i/\itoa_str_reg[3][7] )
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/itoa_str_reg[5][7]' (FDCE) to 'uart_monitor_i/itoa_str_reg[4][6]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/itoa_str_reg[3][6]' (FDCE) to 'uart_monitor_i/itoa_str_reg[4][6]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/itoa_str_reg[3][7]' (FDCE) to 'uart_monitor_i/itoa_str_reg[4][6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uart_monitor_i/\itoa_str_reg[4][6] )
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/tx_shift_reg[11]' (FDPE) to 'uart_monitor_i/tx_shift_reg[3]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/tx_shift_reg[4]' (FDPE) to 'uart_monitor_i/tx_shift_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (foc_top_i/\park_tr_i/sincos_i/theta_b_reg[0] )
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/FSM_sequential_vcnt_reg[2]' (FDCE) to 'uart_monitor_i/eov_reg[3]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/ccnt_reg[13]' (FDC) to 'uart_monitor_i/ccnt_reg[14]'
+INFO: [Synth 8-3886] merging instance 'uart_monitor_i/ccnt_reg[14]' (FDC) to 'uart_monitor_i/ccnt_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uart_monitor_i/\ccnt_reg[15] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 809.648 ; gain = 548.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------+--------------------+---------------+----------------+
+|Module Name     | RTL Object         | Depth x Width | Implemented As | 
++----------------+--------------------+---------------+----------------+
+|park_tr         | sincos_i/rom_y_reg | 1024x15       | Block RAM      | 
+|cartesian2polar | rom_a_reg          | 4096x9        | Block RAM      | 
+|cartesian2polar | rom_theta_reg      | 4096x9        | Block RAM      | 
+|svpwm           | x2_reg             | 1024x9        | Block RAM      | 
++----------------+--------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++----------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping              | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|park_tr         | A*B                      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|park_tr         | A*B                      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|park_tr         | A*B                      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|park_tr         | A*B                      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pi_controller   | (A:0x3b632)*B            | 19     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pi_controller   | (PCIN>>17)+(A:0x3b632)*B | 19     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pi_controller   | (A:0x3b632)*B            | 19     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pi_controller   | (PCIN>>17)+(A:0x3632)*B  | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cartesian2polar | A*B                      | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|svpwm           | A*B                      | 12     | 9      | -      | -      | 21     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|foc_top         | A*(B:0x18)               | 16     | 5      | -      | -      | 21     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|foc_top         | A*(B:0x18)               | 16     | 5      | -      | -      | 21     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|foc_top         | A*(B:0x18)               | 16     | 5      | -      | -      | 21     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++----------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance foc_top_i/i_3/park_tr_i/sincos_i/rom_y_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance foc_top_i/cartesian2polar_ii_7/cartesian2polar_i/rom_a_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance foc_top_i/cartesian2polar_ii_10/cartesian2polar_i/rom_theta_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance foc_top_i/i_15/svpwm_i/x2_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/clark_tr.sv:58]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/clark_tr.sv:58]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/clark_tr.sv:58]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/clark_tr.sv:58]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:37]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:37]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:37]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:37]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/cartesian2polar.sv:31]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/cartesian2polar.sv:31]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/svpwm.sv:28]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/svpwm.sv:28]
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 852.531 ; gain = 591.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 855.164 ; gain = 594.172
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/park_tr.sv:27]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/park_tr.sv:27]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/park_tr.sv:28]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/park_tr.sv:28]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/svpwm.sv:38]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/foc_top.sv:98]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/foc_top.sv:98]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/foc_top.sv:98]
+INFO: [Synth 8-3886] merging instance 'i_3653' (FDC) to 'i_3752'
+INFO: [Synth 8-3886] merging instance 'i_3686' (FDC) to 'i_3752'
+INFO: [Synth 8-3886] merging instance 'i_3719' (FDC) to 'i_3752'
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/clark_tr.sv:58]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/clark_tr.sv:58]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/clark_tr.sv:58]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/clark_tr.sv:58]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/sincos.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:37]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:37]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:37]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/pi_controller.sv:37]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/cartesian2polar.sv:31]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/cartesian2polar.sv:31]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/svpwm.sv:28]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.srcs/sources_1/new/svpwm.sv:28]
+INFO: [Synth 8-6837] The timing for the instance foc_top_i/park_tr_i/sincos_i/rom_y_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance foc_top_i/cartesian2polar_i/rom_a_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance foc_top_i/cartesian2polar_i/rom_theta_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 895.145 ; gain = 634.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 895.145 ; gain = 634.152
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 895.145 ; gain = 634.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 895.145 ; gain = 634.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 895.145 ; gain = 634.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 895.145 ; gain = 634.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 895.145 ; gain = 634.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fpga_top    | foc_top_i/svpwm_i/rom_sy_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     2|
+|2     |CARRY4     |   214|
+|3     |DSP48E1    |    13|
+|4     |LUT1       |   198|
+|5     |LUT2       |   528|
+|6     |LUT3       |   285|
+|7     |LUT4       |   333|
+|8     |LUT5       |   206|
+|9     |LUT6       |   223|
+|10    |MUXF7      |     4|
+|11    |RAMB18E1   |     1|
+|12    |RAMB18E1_2 |     1|
+|13    |RAMB36E1   |     1|
+|14    |RAMB36E1_1 |     1|
+|15    |SRL16E     |     1|
+|16    |FDCE       |  1096|
+|17    |FDPE       |    33|
+|18    |FDRE       |    24|
+|19    |IBUF       |     3|
+|20    |IOBUF      |     1|
+|21    |OBUF       |    10|
++------+-----------+------+
+
+Report Instance Areas: 
++------+----------------------+------------------+------+
+|      |Instance              |Module            |Cells |
++------+----------------------+------------------+------+
+|1     |top                   |                  |  3178|
+|2     |  adc_ad7928_i        |adc_ad7928        |   202|
+|3     |  as5600_read_i       |i2c_register_read |   172|
+|4     |  f_clk_30M           |f_30M             |     4|
+|5     |  foc_top_i           |foc_top           |  2500|
+|6     |    adc_sn_ctrl_i     |hold_detect       |    59|
+|7     |    cartesian2polar_i |cartesian2polar   |   579|
+|8     |    clark_tr_i        |clark_tr          |   351|
+|9     |    park_tr_i         |park_tr           |   478|
+|10    |      sincos_i        |sincos            |   204|
+|11    |    pi_id_i           |pi_controller     |   229|
+|12    |    pi_iq_i           |pi_controller_0   |   212|
+|13    |    svpwm_i           |svpwm             |   473|
+|14    |  uart_monitor_i      |uart_monitor      |   279|
++------+----------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 895.145 ; gain = 634.152
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 895.145 ; gain = 273.668
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 895.145 ; gain = 634.152
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 236 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 895.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+254 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 895.145 ; gain = 642.078
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 895.145 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/13474/Desktop/FPGA_FOC/motor_fpga/vivado_FOC/vivado_FOC.runs/synth_1/fpga_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fpga_top_utilization_synth.rpt -pb fpga_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 21 10:51:21 2023...
